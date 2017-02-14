@@ -11,14 +11,14 @@ loop do
   count=gets.chomp.to_f
   check[title] = {"price" => price, "count" => count, "summary"=> price*count}
   
-end
+    end
 
 puts "Наименование      Цена за ед.        Кол-во единиц        Итого"
 
 final_sum=0
- check.each do |key, value|
+check.each do |key, value|
      final_sum+=value["summary"]
      puts "#{key}               #{value.values.to_s.gsub("[","").gsub("]","").gsub(",","                ")}"
-     end
+    end
 
 puts "Итого     #{final_sum}"
